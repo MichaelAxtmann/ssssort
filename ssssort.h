@@ -423,7 +423,7 @@ void ssssort_int(InputIterator begin, InputIterator end,
  */
 template <typename InputIterator, typename OutputIterator,
           typename Compare = std::less<void>>
-void ssssort(InputIterator begin, InputIterator end, OutputIterator out_begin, Compare compare = {}) {
+void ssssorttwoarray(InputIterator begin, InputIterator end, OutputIterator out_begin, Compare compare = {}) {
     using value_type = typename std::iterator_traits<InputIterator>::value_type;
     static_assert(std::is_convertible<bool, std::result_of_t<Compare(value_type, value_type)>>::value,
                   "the result of the predicate shall be convertible to bool");
